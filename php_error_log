@@ -83,3 +83,13 @@ Stack trace:
 #5 C:\xampp\htdocs\api_rest_php\index.php(26): RoutesController->index()
 #6 {main}
   thrown in C:\xampp\htdocs\api_rest_php\models\get.model.php on line 25
+[10-Oct-2022 19:05:28 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\api_rest_php\models\get.model.php:33
+Stack trace:
+#0 C:\xampp\htdocs\api_rest_php\models\get.model.php(33): PDOStatement->execute()
+#1 C:\xampp\htdocs\api_rest_php\controllers\get.controller.php(22): GetModel::getDataFilter('courses', 'id_course,title...', 'title_course', 'Python intermed...', 'id_course', 'DESC')
+#2 C:\xampp\htdocs\api_rest_php\routes\services\get.php(23): GetController::getDataFilter('courses', 'id_course,title...', 'title_course', 'Python intermed...', 'id_course', 'DESC')
+#3 C:\xampp\htdocs\api_rest_php\routes\routes.php(19): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\api_rest_php\controllers\routes.controllers.php(4): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\api_rest_php\index.php(26): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\api_rest_php\models\get.model.php on line 33

@@ -1,15 +1,11 @@
 <?php
 
 require_once "models/get.model.php";
-
-
-
 class GetController
 {
 
     static public function getData($table,$select,$orderBy,$orderMode)
     {
-
         $response = GetModel::getData($table,$select,$orderBy,$orderMode);
 
         $return = new GetController();
@@ -24,11 +20,10 @@ class GetController
         $return = new GetController();
         $return->fnResponse($response);
     }
-
+    
     //respuestas del controlador
     public function fnResponse($response)
     {
-
         if (!empty($response)) { //si no esta vacio
 
             $json = array(
